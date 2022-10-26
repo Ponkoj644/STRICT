@@ -1,0 +1,2 @@
+# STRICT
+For Practice Purpose
