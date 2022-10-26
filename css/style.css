@@ -1,0 +1,432 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+/* Scroolbar css */
+*::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  margin-left: 10px !important;
+}
+*::-webkit-scrollbar {
+  width: 10px;
+  margin-left: 10px;
+  background-color: #f5f5f5 !important;
+}
+*::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #fff;
+  background-image: linear-gradient(
+    to right,
+    #4cbbc4 0%,
+    #3cd3ad 51%,
+    #4cbbc4 100%
+  );
+}
+/* scroolbar css end */
+:root {
+  /* Color */
+  --primary-color: #15a4fa;
+  --bg-color: #f9f9f9;
+  --white-color: #ffffff;
+  --text-white: #ffffff;
+}
+html,
+body {
+  font-family: "Lato", sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.hidden {
+  visibility: hidden;
+}
+/* Header section start*/
+header {
+  background-color: var(--bg-color);
+}
+.navbar-light .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2821, 164, 250, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+.navbar-light .navbar-toggler {
+  border: 1px solid var(--primary-color);
+  border-radius: 50%;
+}
+.navbar-light .navbar-toggler:focus {
+  box-shadow: none;
+}
+.navbar-light .navbar-nav .nav-link {
+  color: #2d3950;
+  font-size: 18px;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-left: 20px;
+  transition: 0.4s all ease-in-out;
+}
+.navbar-light .navbar-nav .nav-link:hover {
+  color: var(--primary-color);
+}
+/* Header end*/
+
+/* Banner section start */
+.hg {
+  height: 90vh;
+}
+.banner {
+  background-image: url(../img/banner.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom center;
+  position: relative;
+}
+
+.banner h1 {
+  margin: 0;
+  font-size: 70px;
+  font-weight: 600;
+  color: var(--text-white);
+  text-transform: uppercase;
+}
+.banner span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: var(--primary-color);
+}
+.banner p {
+  color: var(--text-white);
+  margin: 15px 0;
+}
+
+/* Button animation */
+.btn {
+  border: 1px solid var(--primary-color);
+  background: none;
+  padding: 10px 30px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.8s;
+  text-transform: capitalize;
+  position: relative;
+  overflow: hidden;
+}
+.btn::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  background: var(--primary-color);
+  z-index: -1;
+  transition: 0.8s;
+}
+.btn-action {
+  margin-top: 15px;
+  color: #ffff;
+}
+.btn-action:hover {
+  color: var(--text-white);
+}
+.btn-action::before {
+  bottom: 0;
+  border-radius: 50% 50% 0 0;
+}
+.btn-action:hover::before {
+  height: 180%;
+  color: var(--text-white);
+}
+/* Icon animation */
+.icon {
+  color: #fff;
+  font-size: 20px;
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: updown 1s linear infinite;
+  animation-direction: alternate;
+}
+@keyframes updown {
+  0% {
+    top: 80%;
+    color: #15a4fa;
+  }
+  100% {
+    top: 90%;
+  }
+}
+/* Icon animation end */
+/* Banner section end */
+
+/* Pure section start */
+.pure {
+  background-color: var(--bg-color);
+  padding: 50px 0;
+}
+.pure h1 {
+  color: #2d3950;
+  font-size: 40px;
+}
+.pure p {
+  color: #999999;
+  font-size: 16px;
+  margin: 20px 0;
+}
+/* Pure section end */
+/* Feature section start */
+
+.feature .inner-item {
+  padding: 20px;
+  transition: 0.4s all ease-in-out;
+}
+.feature .inner-item:hover {
+  box-shadow: 0px 0px 5px 0px rgb(21 164 250 / 30%);
+}
+.feature .icon-box {
+  height: 80px;
+  width: 80px;
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#5fc3ff+0,48baff+50,5fc3ff+50,48baff+100 */
+  background: #5fc3ff; /* Old browsers */
+  background: -moz-linear-gradient(
+    left,
+    #5fc3ff 0%,
+    #48baff 50%,
+    #5fc3ff 50%,
+    #48baff 100%
+  ); /* FF3.6-15 */
+  background: -webkit-linear-gradient(
+    left,
+    #5fc3ff 0%,
+    #48baff 50%,
+    #5fc3ff 50%,
+    #48baff 100%
+  ); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(
+    to right,
+    #5fc3ff 0%,
+    #48baff 50%,
+    #5fc3ff 50%,
+    #48baff 100%
+  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5fc3ff', endColorstr='#48baff',GradientType=1 ); /* IE6-9 */
+
+  margin: auto;
+  font-size: 40px;
+  color: var(--text-white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  box-shadow: 2px 2px 2px 2px rgba(0.2, 0.2, 0.2, 0.2);
+}
+
+.feature h2 {
+  color: #2d3950;
+  font-size: 18px;
+  font-weight: 600;
+}
+.feature p {
+  color: #999999;
+  font-size: 16px;
+  margin-top: 5px;
+}
+/* Feature section end */
+
+/* Showcase section start */
+.showcase {
+  background-color: var(--bg-color);
+}
+.showcase h1 {
+  color: #2d3950;
+  /* font-size: 40px; */
+}
+.showcase p {
+  color: #909090;
+  margin: 15px 0;
+}
+.work {
+  position: relative;
+  width: 100%;
+}
+.work img {
+  width: 100%;
+}
+.work::before {
+  content: "";
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  width: 0%;
+  height: 0%;
+  background-color: black;
+  opacity: 0.6;
+  transition: 0.5s all ease-in-out;
+}
+.work:hover::before {
+  width: 100%;
+  height: 100%;
+}
+.icon-list {
+  position: absolute;
+  /* top: 60%; */
+  top: 0%;
+  left: 0%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: 0.4s all ease-in-out;
+}
+.icon-list ul {
+  list-style: none;
+  width: 90px;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+}
+.icon-list ul li {
+  height: 40px;
+  width: 40px;
+  line-height: 40px;
+  border: 1px solid var(--white-color);
+  border-radius: 3px;
+  text-align: center;
+  color: var(--white-color);
+  cursor: pointer;
+}
+.work:hover .icon-list {
+  opacity: 1;
+  top: 50%;
+  left: 50%;
+}
+/* Showcase section end */
+
+/* Footer section start  */
+.footer {
+  background-image: url(../img/contactimg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.footer::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #2d3950;
+  opacity: 0.6;
+}
+.footer h1 {
+  color: var(--text-white);
+}
+.footer p {
+  color: var(--text-white);
+  margin-top: 5px;
+}
+form {
+  text-align: end;
+}
+.form-control {
+  background: transparent;
+  color: var(--text-white);
+}
+
+.form-control:focus {
+  box-shadow: none;
+  border: 1px solid var(--primary-color);
+}
+form input[type="submit"] {
+  background: transparent;
+  border: none;
+  border: 1px solid var(--primary-color);
+  border-radius: 3px;
+  padding: 5px 20px;
+  color: var(--text-white);
+  transition: 0.4s all ease-in-out;
+}
+form input[type="submit"]:hover {
+  color: var(--text-white);
+  background-color: var(--primary-color);
+}
+.footer-content {
+  position: inherit;
+}
+/* Footer section end */
+
+/* Footer end section start */
+
+.footer-end h6 {
+  font-size: 15px;
+  color: #999999;
+}
+.footer-end ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+.footer-end ul li {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  background: var(--primary-color);
+
+  margin-left: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.4s all ease-in-out;
+}
+.footer-end ul li:hover {
+  background-color: #0b82cc;
+}
+.footer-end ul li i {
+  color: var(--text-white);
+}
+/* Footer end section end */
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .navbar-light .navbar-nav .nav-link {
+    margin: 0;
+  }
+}
+
+@media (min-width: 200px) and (max-width: 767px) {
+  .navbar-light .navbar-nav .nav-link {
+    margin: 0;
+    text-align: center;
+    font-size: 16px;
+  }
+
+  .footer-end ul {
+    justify-content: center;
+    align-items: center;
+  }
+  .footer-end ul li {
+    margin: 10px;
+  }
+  .footer-end h6 {
+    text-align: center;
+    letter-spacing: 1px;
+  }
+}
+/* Responsive css end*/
